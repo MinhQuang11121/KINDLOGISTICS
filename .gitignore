@@ -1,0 +1,38 @@
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Tool/editor/system
+.vscode/
+.streamlit/
+.DS_Store
+Thumbs.db
+.ipynb_checkpoints/
+
+# Training/raw data and heavy artifacts
+archive/
+cache/
+data/
+models_weights/
+
+# Block heavy draft data by default
+*.npy
+*.npz
+*.csv
+*.pkl
+*.h5
+*.ckpt
+
+# Keep ONLY required inference/demo assets
+!models_weights/
+!models_weights/danang_ultra_v6.pth
+!dist_mat_danang_v2.npz
+!danang_nodes_coords.csv
+!traffic_mean_std.npy
+!data_demo_chuan.csv
