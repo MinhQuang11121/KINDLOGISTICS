@@ -65,8 +65,13 @@ if model is None:
 with st.sidebar:
     st.header("⚙️ Bảng Điều Khiển")
     
-    st.subheader("📂 1. Dữ liệu Lịch sử Thật")
-    history_file = st.file_uploader("Tải file dữ liệu 12 bước thời gian (CSV)", type=["csv"])
+    # Gợi ý sửa lại text trên giao diện Streamlit cho chuẩn bài
+st.markdown("### 📂 1. Dữ liệu Lịch sử Thực tế")
+uploaded_file = st.file_uploader(
+    "Tải file dữ liệu 4 bước thời gian - 1 tiếng quá khứ (CSV)", 
+    type=["csv"]
+)
+st.caption("Khuyến nghị: File dung lượng < 5MB (Chứa thông tin 2.891 ngã tư)")
     
     if history_file:
         st.success(f"✅ Đã nhận luồng dữ liệu đầu vào.")
